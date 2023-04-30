@@ -51,7 +51,7 @@ body.modal_shown {
 }
 
 .modal_overlay.shown {
-    animation: fadeIn .7s ease-out forwards;
+    animation: fadeIn .5s ease-out forwards;
 }
 
 @keyframes fadeIn {
@@ -65,7 +65,7 @@ body.modal_shown {
 }
 
 .modal_overlay.fade {
-    animation: fadeOut .7s ease-out forwards;
+    animation: fadeOut .5s ease-out forwards;
 }
 
 @keyframes fadeOut {
@@ -89,34 +89,47 @@ body.modal_shown {
     /* media queried props */
     max-width: 500px;
     border-radius: 4px;
-    transform: translateY(-900px);
+    transform: translateY(-500px);
+    opacity: 0;
 }
 
 .modal_content.shown {
-    animation: slideIn .5s ease-out forwards;
+    animation: slideIn .35s ease-out forwards;
 }
 
 @keyframes slideIn {
-    from {
-        transform: translateY(-900px);
+    0% {
+        transform: translateY(-500px);
+        opacity: 0;
     }
 
-    to {
+    50% {
+        opacity: 1;
+    }
+
+    100% {
         transform: translateY(0px);
+        opacity: 1;
     }
 }
 
 .modal_content.fade {
-    animation: slideOut .5s ease-out forwards;
+    animation: slideOut .35s ease-out forwards;
 }
 
 @keyframes slideOut {
-    from {
+    0% {
         transform: translateY(0px);
+        opacity: 1;
     }
 
-    to {
-        transform: translateY(-900px);
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(-500px);
+        opacity: 0;
     }
 }
 
