@@ -15,15 +15,16 @@
   </head>
   <body>
     <!-- Modal -->
-    <div class="modal_overlay">
-      <div class="modal">
+    <div class="modal">
+      <div class="modal_overlay"></div>
+      <div class="modal_content">
         <header class="modal_header">
           <div>
             <p>PDF Popup</p>
             <div class="modal_cta_buttons">
               <button>prev</button>
               <button>next</button>
-              <button>
+              <button class="modal_close_btn">
                 <svg
                   class="close_button"
                   style="cursor: pointer; height: 24px"
@@ -139,7 +140,10 @@
     </div>
 
     <!-- Body of the page -->
-    <p>Shalom is a good girl</p>
+    <div class="main_body">
+      <p>Shalom is a good girl</p>
+      <button class="modal_open_btn">Open Modal</button>
+    </div>
   </body>
   <script src="main.js"></script>
 </html>
