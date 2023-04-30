@@ -13,7 +13,6 @@ button {
     font-weight: lighter;
 }
 
-/* Overlay */
 .modal_overlay {
     font-size: 14px;
     position: fixed;
@@ -24,25 +23,25 @@ button {
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.6);
     display: flex;
-    padding: 30px 0;
     justify-content: center;
-    /* align-items: center; */
+    transition: transform .3s ease-out;
+    /* media queried props */
+    padding: 30px 0;
 }
 
 .modal {
     width: 100%;
-    max-width: 500px;
     height: 100%;
     background-color: white;
-    border-radius: 4px;
     display: flex;
     flex-direction: column;
-    /* Break point manipulated props */
+    transition: transform .3s ease-out;
+    /* media queried props */
+    max-width: 500px;
+    border-radius: 4px;
 
 }
 
-
-/* Modal body */
 .modal_body {
     flex: 1;
     overflow-y: auto;
@@ -93,4 +92,17 @@ button {
     left: 0;
     border-bottom: 0;
     border-top: 1px solid #dee2e6;
+}
+
+/* Media Query */
+@media (max-width: 767.98px) {
+    .modal_overlay {
+        padding: 0;
+    }
+
+    .modal {
+        max-width: 100%;
+        border-radius: 0px;
+    }
+
 }
